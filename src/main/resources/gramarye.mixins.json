@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.seristic.gramarye.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "Gramarye.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "MagicalPaperMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
