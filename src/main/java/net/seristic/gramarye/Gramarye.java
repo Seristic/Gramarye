@@ -1,5 +1,6 @@
 package net.seristic.gramarye;
 
+// Import statements
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -23,9 +24,13 @@ public class Gramarye {
     public static final String MOD_ID = "gramarye";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-public Gramarye() {
+
+    // Constructor
+    public Gramarye() {
+        // Get the mod event bus
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // Register mod items and blocks
         CreativeModTab.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
@@ -38,27 +43,32 @@ public Gramarye() {
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
-}
+    }
 
+    // Method for common setup
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        // Common setup logic can be added here if needed
     }
 
-    // Add the example block item to the building blocks tab
+    // Method to add items to the creative tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        // Logic to add items to the creative tab can be added here
     }
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
+
+    // Method to handle server starting event
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-
+        // Logic to handle server starting event can be added here
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
+    // Inner class for client-side mod events
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
 
+        // Method to handle client setup event
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            // Logic to handle client setup event can be added here
         }
     }
 }
