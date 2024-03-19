@@ -28,6 +28,7 @@ public class CreativeModTab {
                         pOutput.accept(ModBlocks.MAGICAL_PLANK.get());
                         pOutput.accept(ModBlocks.INFERNAL_STONE.get());
                         pOutput.accept(ModBlocks.ARCANE_RUNESTONE.get());
+                        pOutput.accept(ModItems.FORBIDDEN_FRAGMENT.get());
                     })
                     .build());
 
