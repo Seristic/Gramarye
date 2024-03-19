@@ -7,6 +7,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.seristic.gramarye.Gramarye;
+import net.seristic.gramarye.item.custom.CursedItem;
 
 public class ModItems extends Item {
     public static final DeferredRegister<Item> ITEMS =
@@ -16,7 +17,7 @@ public class ModItems extends Item {
             () -> new Item(new Item.Properties().stacksTo(1)
             ));
     public static final RegistryObject<Item> FORBIDDEN_FRAGMENT = ITEMS.register("forbidden_fragment",
-            () -> new Item(new Item.Properties().stacksTo(1)
+            () -> new CursedItem(new Item.Properties().stacksTo(1)
                     .rarity(Rarity.EPIC)
             ));
 
