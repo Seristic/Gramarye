@@ -8,8 +8,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.seristic.gramarye.Gramarye;
 
-import javax.imageio.spi.RegisterableService;
-
 public class ModItems extends Item {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Gramarye.MOD_ID);
