@@ -34,14 +34,9 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .requiresCorrectToolForDrops().strength(3.5f, 5.0f)
             ));
-//     This will be added at a later point when I understand more on Blockstates
-//    public static final RegistryObject<Block> GLASS_JAR = registerBlock("glass_jar",
-//            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CAULDRON)
-//                    .instabreak()
-//            ));
 
 //  This is the block handler that allows me to register the block.
-// Method to register a block and its corresponding item
+//  Method to register a block and its corresponding item
 private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
     RegistryObject<T> toReturn = BLOCKS.register(name, block);
     registerBlockItem(name, toReturn); // Register block item

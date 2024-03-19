@@ -15,7 +15,11 @@ public class ModItems extends Item {
             DeferredRegister.create(ForgeRegistries.ITEMS, Gramarye.MOD_ID);
 
     public static final RegistryObject<Item> MAGICAL_PAPER = ITEMS.register("magical_paper",
-            () -> new Item(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)
+            () -> new Item(new Item.Properties().stacksTo(1)
+            ));
+    public static final RegistryObject<Item> FORBIDDEN_FRAGMENT = ITEMS.register("forbidden_fragment",
+            () -> new Item(new Item.Properties().stacksTo(1)
+                    .rarity(Rarity.EPIC)
             ));
 
     public ModItems(Properties pProperties) {
